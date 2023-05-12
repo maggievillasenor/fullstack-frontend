@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function Layout ({children}) {
     return (
         <>
-            <Header title="John Doe">
+            <Header title="Margarita Villaseñor">
                 <Link href="/">Home</Link>
                 <Link href="/about">About</Link>
                 <Link href="/projects">Projects</Link>
