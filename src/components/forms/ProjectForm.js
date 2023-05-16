@@ -5,7 +5,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import { useEffect, useState } from "react";
 
 
-export default function ProjectForm ({ onSubmit, editValues}) {
+export default function ProjectForm ({ onSubmit, editValues }) {
 
     const defaultValues = {
         name: "",
@@ -40,6 +40,7 @@ export default function ProjectForm ({ onSubmit, editValues}) {
         overview: yup.string(),
         tools: yup.array(),
         imageUrl: yup.string(),
+        projectLink: yup.string(),
     })
 
     const { control, watch, reset, handleSubmit } = useForm({
@@ -160,7 +161,7 @@ export default function ProjectForm ({ onSubmit, editValues}) {
                         render={ ({ field, fieldState }) =>(
                             <TextField
                                 {...field}
-                                labelId='Project link'
+                                label='Project link'
                                 variant='outlined'
                                 fullWidth
                                 error={ !!fieldState.error}
@@ -178,7 +179,7 @@ export default function ProjectForm ({ onSubmit, editValues}) {
                         render={ ({ field, fieldState }) =>(
                             <TextField
                                 {...field}
-                                labelId='Image URL'
+                                label='Image URL'
                                 variant='outlined'
                                 fullWidth
                                 error={ !!fieldState.error}

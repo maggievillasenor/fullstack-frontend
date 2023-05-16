@@ -1,5 +1,5 @@
 import PageDescription from "@/components/PageDescription";
-import ProjectItem from "@/components/ProjectItem";
+import ProjectItem from "@/components";
 
 export default function ProjectsPage ({ projects }) {
     return (
@@ -35,13 +35,6 @@ export async function getServerSideProps(){
                 "https://d33wubrfki0l68.cloudfront.net/9199afe42f789dbddb324ed3edd326e080e693c1/28f54/assets/jpeg/wilsonport.jpeg",
         },
     ];
-
-    /* try {
-        const response = await fetch("http://localhost:3000/api/projects")
-        projects = await response.json();
-    } catch(error) {
-        console.error(error);
-    } */
 
     return {
         props: {
